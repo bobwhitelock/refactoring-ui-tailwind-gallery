@@ -21,7 +21,8 @@
   "devDependencies": {
     "gatsby-plugin-postcss": "^2.1.18",
     "prettier": "^1.19.1",
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "^1.1.4",
+    "tailwindcss-gradients": "^2.3.1"
   },
   "keywords": [
     "gatsby"
