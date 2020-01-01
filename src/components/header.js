@@ -10,7 +10,7 @@ const PageLink = ({ route, pageTitle, currentPageTitle }) => {
   }
 
   return (
-    <h2>
+    <h2 className="pb-8 inline">
       <Link to={route} className={classes}>
         {pageTitle}
       </Link>
@@ -20,19 +20,17 @@ const PageLink = ({ route, pageTitle, currentPageTitle }) => {
 
 const Header = ({ siteTitle, pageTitle }) => (
   <header>
-    <div>
-      <h1 className="text-center p-8 text-3xl">
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
+    <h1 className="text-center p-8 text-3xl">
+      <Link to="/">{siteTitle}</Link>
+    </h1>
 
-    <div className="pb-8">
-      <PageLink
-        route="/buttons"
-        pageTitle="Buttons"
-        currentPageTitle={pageTitle}
-      />
-    </div>
+    <PageLink
+      route="/buttons"
+      pageTitle="Buttons"
+      currentPageTitle={pageTitle}
+    />
+
+    <PageLink route="/inputs" pageTitle="Inputs" currentPageTitle={pageTitle} />
   </header>
 )
 
