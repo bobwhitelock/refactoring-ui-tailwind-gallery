@@ -9,9 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import SEO from "../components/seo"
 import Header from "./header"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageTitle }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,7 +25,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <SEO title={pageTitle} />
+      <Header siteTitle={data.site.siteMetadata.title} pageTitle={pageTitle} />
       <div>
         <main>{children}</main>
         <footer>© {new Date().getFullYear()}</footer>
@@ -35,6 +37,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  pageTitle: PropTypes.string.isRequired,
 }
 
 export default Layout
