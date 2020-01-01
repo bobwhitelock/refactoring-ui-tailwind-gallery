@@ -10,6 +10,8 @@ const IndexPage = () => (
     <SEO title="Home" />
 
     <div className="m-8">
+      <h2 className="text-xl">Buttons</h2>
+
       <ButtonInfo description="Small rounded" additionalClasses="rounded" />
       <ButtonInfo description="Large rounded" additionalClasses="rounded-lg" />
       <ButtonInfo description="Full rounded" additionalClasses="rounded-full" />
